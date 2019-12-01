@@ -13,6 +13,24 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat', 'Lato']
+        }
+      }
+    },
+    {
+     resolve: `gatsby-plugin-google-fonts`,
+     options: {
+       fonts: [
+         `Montserrat`,
+         `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+       ],
+       display: 'swap'
+     }
+   },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -24,7 +42,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
